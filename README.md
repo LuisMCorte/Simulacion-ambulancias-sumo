@@ -152,6 +152,7 @@ apatir de los archivos.csv
 - `eventos.log`: registro de eventos.
 - `collisions.xml`: información de colisiones generada por SUMO.
 - `resultados_base/`: resultados del escenario base.
+- `resultados_extension/`: resultados de extension: politicas de retorno.
 
 ## Ejecución
 

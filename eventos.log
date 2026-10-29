@@ -1,0 +1,411 @@
+=== RED VIAL (TABLA 4.8) ===
+Aristas: 1577
+Semáforos: 97
+ Retrying in 1 seconds
+=== TAREA 2.1: MAPEO DE HOSPITALES ===
+ID           | TIPO     | ARISTA               | POS (m)  | CALLE
+---------------------------------------------------------------------------
+VCM          | público  | 208782596#1          | 74.5     | Avenida Del ParaÃ­so
+IESS_JCA     | público  | 357285817#5          | 294.0    | CircunvalaciÃ³n Sur
+MILITAR      | público  | 334948974#0          | 198.3    | Avenida 12 de Abril
+MUNI_PAT     | público  | 378364650#0          | 87.8     | Via Checa Chiquintad
+MUNI_VALLE   | público  | -171302162#23        | 88.2     | N/A
+MONTE_SINAI  | privado  | 269103111#3          | 38.0     | Avenida Fray Vicente Solano
+DEL_RIO      | privado  | 29223060#0           | 76.4     | N/A
+
+=== TAREA 2.2: STOCK INICIAL DE AMBULANCIAS ===
+VCM         : 3 unidades -> ['VCM_U1', 'VCM_U2', 'VCM_U3']
+IESS_JCA    : 1 unidades -> ['IESS_JCA_U1']
+MILITAR     : 1 unidades -> ['MILITAR_U1']
+MUNI_PAT    : 3 unidades -> ['MUNI_PAT_U1', 'MUNI_PAT_U2', 'MUNI_PAT_U3']
+MUNI_VALLE  : 2 unidades -> ['MUNI_VALLE_U1', 'MUNI_VALLE_U2']
+MONTE_SINAI : 0 unidades -> []
+DEL_RIO     : 0 unidades -> []
+
+=== TAREA 3.1: AGENDA DE ACCIDENTES ===
+Evento 01 | t=  719s | hora=1
+Evento 02 | t=  871s | hora=1
+Evento 03 | t= 3071s | hora=1
+Evento 04 | t= 3316s | hora=1
+Evento 05 | t= 3333s | hora=1
+Evento 06 | t= 3730s | hora=2
+Evento 07 | t= 3956s | hora=2
+Evento 08 | t= 5328s | hora=2
+Evento 09 | t= 5833s | hora=2
+Evento 10 | t= 6018s | hora=2
+Evento 11 | t= 7322s | hora=3
+Evento 12 | t= 7583s | hora=3
+Evento 13 | t= 8095s | hora=3
+Evento 14 | t= 8152s | hora=3
+Evento 15 | t= 9269s | hora=3
+
+=== AVANZANDO SIMULACIÓN ===
+[t=120s] Ambulancia VCM -> IESS_JCA | 31 aristas | ETA=323.88s
+
+[t=538s] AMBULANCIA DE PRUEBA LLEGÓ | real=418.00s | ETA=323.88s | diferencia=94.12s
+
+[t=719s] EVENTO PROGRAMADO 1 ACTIVADO
+
+[t=719s] PREPARANDO ACCIDENTE | bus=bus19 | arista=48501816 | carril=48501816_0 | pos=213.60 m
+  Moto solicitada: moto_acc_1 (45 m detrás)
+  Moto moto_acc_1 activada: speedMode=0, v=22.0 m/s
+[t=720s] Moto moto_acc_1 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_01
+=======================================================
+Tiempo: 726 s | Bus: bus19 | Moto: moto_acc_1
+Arista: 399679493#0 | Carril: 399679493#0_0 | Posición: 31.37 m
+Longitud: -78.994019 | Latitud: -2.893207
+POI amarillo: POI_ACC_01 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=726s] DESPACHO ACC_01: MUNI_PAT_U1 desde MUNI_PAT | ETA=265.7s | espera=0s | disponibles=2
+
+[t=871s] EVENTO PROGRAMADO 2 ACTIVADO
+
+[t=871s] PREPARANDO ACCIDENTE | bus=bus22 | arista=301162960#8 | carril=301162960#8_0 | pos=379.54 m
+  Moto solicitada: moto_acc_2 (45 m detrás)
+  Moto moto_acc_2 activada: speedMode=0, v=22.0 m/s
+[t=872s] Moto moto_acc_2 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_02
+=======================================================
+Tiempo: 875 s | Bus: bus22 | Moto: moto_acc_2
+Arista: 301162960#8 | Carril: 301162960#8_0 | Posición: 400.54 m
+Longitud: -78.982196 | Latitud: -2.889762
+POI amarillo: POI_ACC_02 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=875s] DESPACHO ACC_02: VCM_U1 desde VCM | ETA=426.1s | espera=0s | disponibles=2
+[t=1063s] LLEGADA MUNI_PAT_U1 a ACC_01 (distancia/carril) | respuesta=337s | total=337s
+[t=1183s] FIN ATENCIÓN ACC_01: retorno de MUNI_PAT_U1 a MUNI_PAT (origen: MUNI_PAT)
+[t=1209s] LLEGADA VCM_U1 a ACC_02 (distancia/carril) | respuesta=334s | total=334s
+[t=1329s] FIN ATENCIÓN ACC_02: retorno de VCM_U1 a VCM (origen: VCM)
+[t=1519s] MISIÓN CERRADA MUNI_PAT_U1 -> MUNI_PAT (hospital alcanzado) | duración=793s | stock=3
+[t=1628s] MISIÓN CERRADA VCM_U1 -> VCM (hospital alcanzado) | duración=753s | stock=3
+
+[t=3071s] EVENTO PROGRAMADO 3 ACTIVADO
+
+[t=3071s] PREPARANDO ACCIDENTE | bus=bus80 | arista=552654210 | carril=552654210_0 | pos=211.73 m
+  Moto solicitada: moto_acc_3 (45 m detrás)
+  Moto moto_acc_3 activada: speedMode=0, v=22.0 m/s
+[t=3072s] Moto moto_acc_3 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_03
+=======================================================
+Tiempo: 3077 s | Bus: bus80 | Moto: moto_acc_3
+Arista: -554134453 | Carril: -554134453_0 | Posición: 8.72 m
+Longitud: -78.996005 | Latitud: -2.892053
+POI amarillo: POI_ACC_03 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=3077s] DESPACHO ACC_03: MILITAR_U1 desde MILITAR | ETA=351.5s | espera=0s | disponibles=0
+
+[t=3316s] EVENTO PROGRAMADO 4 ACTIVADO
+
+[t=3316s] PREPARANDO ACCIDENTE | bus=bus86 | arista=362156554#0 | carril=362156554#0_0 | pos=454.84 m
+  Moto solicitada: moto_acc_4 (45 m detrás)
+  Moto moto_acc_4 activada: speedMode=0, v=22.0 m/s
+[t=3320s] Moto moto_acc_4 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_04
+=======================================================
+Tiempo: 3328 s | Bus: bus82 | Moto: moto_acc_4
+Arista: 40972467 | Carril: 40972467_0 | Posición: 10.28 m
+Longitud: -79.006028 | Latitud: -2.919524
+POI amarillo: POI_ACC_04 | Estado: ESPERANDO AMBULANCIA
+Aviso: la moto impactó a bus82, no al bus programado bus86
+=======================================================
+
+[t=3328s] DESPACHO ACC_04: IESS_JCA_U1 desde IESS_JCA | ETA=237.2s | espera=0s | disponibles=0
+
+[t=3333s] EVENTO PROGRAMADO 5 ACTIVADO
+
+[t=3333s] PREPARANDO ACCIDENTE | bus=bus90 | arista=-533567979 | carril=-533567979_0 | pos=702.55 m
+  Moto solicitada: moto_acc_5 (45 m detrás)
+  Moto moto_acc_5 activada: speedMode=0, v=22.0 m/s
+[t=3334s] Moto moto_acc_5 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_05
+=======================================================
+Tiempo: 3339 s | Bus: bus90 | Moto: moto_acc_5
+Arista: -533567979 | Carril: -533567979_0 | Posición: 767.55 m
+Longitud: -78.989867 | Latitud: -2.897822
+POI amarillo: POI_ACC_05 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=3339s] DESPACHO ACC_05: MUNI_VALLE_U1 desde MUNI_VALLE | ETA=429.4s | espera=0s | disponibles=1
+[t=3371s] LLEGADA MILITAR_U1 a ACC_03 (distancia/carril) | respuesta=294s | total=294s
+[t=3491s] FIN ATENCIÓN ACC_03: retorno de MILITAR_U1 a MUNI_PAT (origen: MILITAR)
+[t=3544s] LLEGADA IESS_JCA_U1 a ACC_04 (equipo a pie) | respuesta=216s | total=216s
+[t=3664s] FIN ATENCIÓN ACC_04: retorno de IESS_JCA_U1 a VCM (origen: IESS_JCA)
+
+[t=3730s] EVENTO PROGRAMADO 6 ACTIVADO
+
+[t=3730s] PREPARANDO ACCIDENTE | bus=bus99 | arista=351447910#1 | carril=351447910#1_0 | pos=232.83 m
+  Moto solicitada: moto_acc_6 (45 m detrás)
+  Moto moto_acc_6 activada: speedMode=0, v=22.0 m/s
+[t=3731s] Moto moto_acc_6 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_06
+=======================================================
+Tiempo: 3734 s | Bus: bus99 | Moto: moto_acc_6
+Arista: 351447911#8 | Carril: :cluster_10958632127_4049293690_643227130_6_0 | Posición: 7.71 m
+Longitud: -78.993596 | Latitud: -2.887780
+POI amarillo: POI_ACC_06 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=3734s] DESPACHO ACC_06: VCM_U2 desde VCM | ETA=424.7s | espera=0s | disponibles=2
+[t=3746s] LLEGADA MUNI_VALLE_U1 a ACC_05 (distancia/carril) | respuesta=407s | total=407s
+[t=3845s] MISIÓN CERRADA MILITAR_U1 -> MUNI_PAT (hospital alcanzado) | duración=768s | stock=4
+[t=3866s] FIN ATENCIÓN ACC_05: retorno de MUNI_VALLE_U1 a VCM (origen: MUNI_VALLE)
+
+[t=3956s] EVENTO PROGRAMADO 7 ACTIVADO
+
+[t=3956s] PREPARANDO ACCIDENTE | bus=bus104 | arista=-534903533 | carril=-534903533_0 | pos=70.76 m
+  Moto solicitada: moto_acc_7 (45 m detrás)
+  Moto moto_acc_7 activada: speedMode=0, v=22.0 m/s
+[t=3957s] Moto moto_acc_7 insertada y activada
+[t=3981s] MISIÓN CERRADA IESS_JCA_U1 -> VCM (hospital alcanzado) | duración=653s | stock=3
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_07
+=======================================================
+Tiempo: 3986 s | Bus: bus104 | Moto: moto_acc_7
+Arista: -91011063 | Carril: -91011063_0 | Posición: 7.18 m
+Longitud: -79.006331 | Latitud: -2.922925
+POI amarillo: POI_ACC_07 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=3986s] DESPACHO ACC_07: VCM_U3 desde VCM | ETA=388.3s | espera=0s | disponibles=2
+[t=4024s] LLEGADA VCM_U2 a ACC_06 (distancia/carril) | respuesta=290s | total=290s
+[t=4042s] MISIÓN CERRADA MUNI_VALLE_U1 -> VCM (hospital alcanzado) | duración=703s | stock=3
+[t=4144s] FIN ATENCIÓN ACC_06: retorno de VCM_U2 a VCM (origen: VCM)
+[t=4459s] MISIÓN CERRADA VCM_U2 -> VCM (hospital alcanzado) | duración=725s | stock=4
+[t=4508s] LLEGADA VCM_U3 a ACC_07 (distancia/carril) | respuesta=522s | total=522s
+[t=4628s] FIN ATENCIÓN ACC_07: retorno de VCM_U3 a MONTE_SINAI (origen: VCM)
+[t=4892s] MISIÓN CERRADA VCM_U3 -> MONTE_SINAI (hospital alcanzado) | duración=906s | stock=1
+
+[t=5328s] EVENTO PROGRAMADO 8 ACTIVADO
+
+[t=5328s] PREPARANDO ACCIDENTE | bus=bus136 | arista=-345400884#4 | carril=-345400884#4_0 | pos=112.95 m
+  Moto solicitada: moto_acc_8 (45 m detrás)
+  Moto moto_acc_8 activada: speedMode=0, v=22.0 m/s
+[t=5329s] Moto moto_acc_8 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_08
+=======================================================
+Tiempo: 5335 s | Bus: bus136 | Moto: moto_acc_8
+Arista: -345400884#4 | Carril: -345400884#4_0 | Posición: 199.95 m
+Longitud: -78.989626 | Latitud: -2.899386
+POI amarillo: POI_ACC_08 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=5335s] DESPACHO ACC_08: VCM_U1 desde VCM | ETA=204.3s | espera=0s | disponibles=3
+[t=5535s] LLEGADA VCM_U1 a ACC_08 (distancia/carril) | respuesta=200s | total=200s
+[t=5655s] FIN ATENCIÓN ACC_08: retorno de VCM_U1 a VCM (origen: VCM)
+
+[t=5833s] EVENTO PROGRAMADO 9 ACTIVADO
+
+[t=5833s] PREPARANDO ACCIDENTE | bus=bus155 | arista=894449137 | carril=894449137_0 | pos=465.41 m
+  Moto solicitada: moto_acc_9 (45 m detrás)
+  Moto moto_acc_9 activada: speedMode=0, v=22.0 m/s
+[t=5834s] Moto moto_acc_9 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_09
+=======================================================
+Tiempo: 5843 s | Bus: bus155 | Moto: moto_acc_9
+Arista: 894449137 | Carril: 894449137_0 | Posición: 618.41 m
+Longitud: -79.003439 | Latitud: -2.884587
+POI amarillo: POI_ACC_09 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=5843s] DESPACHO ACC_09: MUNI_PAT_U2 desde MUNI_PAT | ETA=428.2s | espera=0s | disponibles=3
+[t=5846s] MISIÓN CERRADA VCM_U1 -> VCM (hospital alcanzado) | duración=511s | stock=4
+
+[t=6018s] EVENTO PROGRAMADO 10 ACTIVADO
+
+[t=6018s] PREPARANDO ACCIDENTE | bus=bus166 | arista=523917861#1 | carril=523917861#1_1 | pos=66.23 m
+  Moto solicitada: moto_acc_10 (45 m detrás)
+  Moto moto_acc_10 activada: speedMode=0, v=22.0 m/s
+[t=6019s] Moto moto_acc_10 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_10
+=======================================================
+Tiempo: 6025 s | Bus: bus166 | Moto: moto_acc_10
+Arista: 895065310 | Carril: 895065310_1 | Posición: 10.91 m
+Longitud: -79.009016 | Latitud: -2.913165
+POI amarillo: POI_ACC_10 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=6025s] DESPACHO ACC_10: VCM_U3 desde MONTE_SINAI | ETA=96.5s | espera=0s | disponibles=0
+[t=6104s] LLEGADA VCM_U3 a ACC_10 (distancia/carril) | respuesta=79s | total=79s
+[t=6224s] FIN ATENCIÓN ACC_10: retorno de VCM_U3 a MONTE_SINAI (origen: MONTE_SINAI)
+[t=6271s] LLEGADA MUNI_PAT_U2 a ACC_09 (distancia/carril) | respuesta=428s | total=428s
+[t=6288s] MISIÓN CERRADA VCM_U3 -> MONTE_SINAI (hospital alcanzado) | duración=263s | stock=1
+[t=6391s] FIN ATENCIÓN ACC_09: retorno de MUNI_PAT_U2 a MUNI_PAT (origen: MUNI_PAT)
+[t=6646s] MISIÓN CERRADA MUNI_PAT_U2 -> MUNI_PAT (hospital alcanzado) | duración=803s | stock=4
+
+[t=7322s] EVENTO PROGRAMADO 11 ACTIVADO
+
+[t=7322s] PREPARANDO ACCIDENTE | bus=bus201 | arista=48503910#1-AddedOnRampEdge | carril=48503910#1-AddedOnRampEdge_1 | pos=76.19 m
+  Moto solicitada: moto_acc_11 (45 m detrás)
+  Moto moto_acc_11 activada: speedMode=0, v=22.0 m/s
+[t=7323s] Moto moto_acc_11 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_11
+=======================================================
+Tiempo: 7366 s | Bus: bus199 | Moto: moto_acc_11
+Arista: 552457156 | Carril: 552457156_0 | Posición: 113.45 m
+Longitud: -78.993693 | Latitud: -2.918589
+POI amarillo: POI_ACC_11 | Estado: ESPERANDO AMBULANCIA
+Aviso: la moto impactó a bus199, no al bus programado bus201
+=======================================================
+
+[t=7366s] DESPACHO ACC_11: IESS_JCA_U1 desde VCM | ETA=235.4s | espera=0s | disponibles=3
+[t=7551s] LLEGADA IESS_JCA_U1 a ACC_11 (distancia/carril) | respuesta=185s | total=185s
+
+[t=7583s] EVENTO PROGRAMADO 12 ACTIVADO
+
+[t=7583s] PREPARANDO ACCIDENTE | bus=bus203 | arista=60204530 | carril=60204530_0 | pos=233.07 m
+  Moto solicitada: moto_acc_12 (45 m detrás)
+  Moto moto_acc_12 activada: speedMode=0, v=22.0 m/s
+[t=7584s] Moto moto_acc_12 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_12
+=======================================================
+Tiempo: 7590 s | Bus: bus203 | Moto: moto_acc_12
+Arista: 60204530 | Carril: 60204530_0 | Posición: 320.07 m
+Longitud: -78.995991 | Latitud: -2.908813
+POI amarillo: POI_ACC_12 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=7590s] DESPACHO ACC_12: VCM_U3 desde MONTE_SINAI | ETA=185.0s | espera=0s | disponibles=0
+[t=7671s] FIN ATENCIÓN ACC_11: retorno de IESS_JCA_U1 a MONTE_SINAI (origen: VCM)
+[t=7767s] LLEGADA VCM_U3 a ACC_12 (distancia/carril) | respuesta=177s | total=177s
+[t=7887s] FIN ATENCIÓN ACC_12: retorno de VCM_U3 a VCM (origen: MONTE_SINAI)
+[t=7900s] MISIÓN CERRADA IESS_JCA_U1 -> MONTE_SINAI (hospital alcanzado) | duración=534s | stock=1
+[t=7962s] MISIÓN CERRADA VCM_U3 -> VCM (hospital alcanzado) | duración=372s | stock=4
+
+[t=8095s] EVENTO PROGRAMADO 13 ACTIVADO
+
+[t=8095s] PREPARANDO ACCIDENTE | bus=bus219 | arista=400017963 | carril=400017963_1 | pos=256.32 m
+  Moto solicitada: moto_acc_13 (45 m detrás)
+  Moto moto_acc_13 activada: speedMode=0, v=22.0 m/s
+[t=8096s] Moto moto_acc_13 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_13
+=======================================================
+Tiempo: 8102 s | Bus: bus219 | Moto: moto_acc_13
+Arista: 400017963 | Carril: 400017963_1 | Posición: 343.32 m
+Longitud: -79.001985 | Latitud: -2.904929
+POI amarillo: POI_ACC_13 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=8102s] DESPACHO ACC_13: MUNI_VALLE_U1 desde VCM | ETA=194.8s | espera=0s | disponibles=3
+
+[t=8152s] EVENTO PROGRAMADO 14 ACTIVADO
+
+[t=8152s] PREPARANDO ACCIDENTE | bus=bus222 | arista=42136869#0 | carril=42136869#0_2 | pos=153.07 m
+  Moto solicitada: moto_acc_14 (45 m detrás)
+  Moto moto_acc_14 activada: speedMode=0, v=22.0 m/s
+[t=8153s] Moto moto_acc_14 insertada y activada
+[t=8243s] Intento fallido: moto_acc_14; sin colisión en 90 s
+[t=8243s] Reintento en t=8303s (colisión no confirmada).
+[t=8275s] LLEGADA MUNI_VALLE_U1 a ACC_13 (distancia/carril) | respuesta=173s | total=173s
+
+[t=8303s] EVENTO PROGRAMADO 15 ACTIVADO
+
+[t=8303s] PREPARANDO ACCIDENTE | bus=bus229 | arista=542406423 | carril=542406423_0 | pos=70.61 m
+  Moto solicitada: moto_acc_15 (45 m detrás)
+  Moto moto_acc_15 activada: speedMode=0, v=22.0 m/s
+[t=8304s] Moto moto_acc_15 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_14
+=======================================================
+Tiempo: 8310 s | Bus: bus229 | Moto: moto_acc_15
+Arista: 542406423 | Carril: 542406423_0 | Posición: 157.61 m
+Longitud: -78.999665 | Latitud: -2.913390
+POI amarillo: POI_ACC_14 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=8310s] DESPACHO ACC_14: VCM_U2 desde VCM | ETA=258.7s | espera=0s | disponibles=2
+[t=8395s] FIN ATENCIÓN ACC_13: retorno de MUNI_VALLE_U1 a MILITAR (origen: VCM)
+[t=8490s] MISIÓN CERRADA MUNI_VALLE_U1 -> MILITAR (hospital alcanzado) | duración=388s | stock=1
+[t=8509s] LLEGADA VCM_U2 a ACC_14 (distancia/carril) | respuesta=199s | total=199s
+[t=8629s] FIN ATENCIÓN ACC_14: retorno de VCM_U2 a MONTE_SINAI (origen: VCM)
+[t=8779s] MISIÓN CERRADA VCM_U2 -> MONTE_SINAI (hospital alcanzado) | duración=469s | stock=2
+
+[t=9269s] EVENTO PROGRAMADO 16 ACTIVADO
+
+[t=9269s] PREPARANDO ACCIDENTE | bus=bus253 | arista=416636170#0 | carril=416636170#0_0 | pos=248.69 m
+  Moto solicitada: moto_acc_16 (45 m detrás)
+  Moto moto_acc_16 activada: speedMode=0, v=22.0 m/s
+[t=9270s] Moto moto_acc_16 insertada y activada
+
+=======================================================
+ACCIDENTE REAL REGISTRADO: ACC_15
+=======================================================
+Tiempo: 9274 s | Bus: bus253 | Moto: moto_acc_16
+Arista: 416636170#0 | Carril: 416636170#0_0 | Posición: 291.69 m
+Longitud: -78.993261 | Latitud: -2.914248
+POI amarillo: POI_ACC_15 | Estado: ESPERANDO AMBULANCIA
+=======================================================
+
+[t=9274s] DESPACHO ACC_15: VCM_U1 desde VCM | ETA=136.4s | espera=0s | disponibles=1
+[t=9374s] LLEGADA VCM_U1 a ACC_15 (distancia/carril) | respuesta=100s | total=100s
+[t=9494s] FIN ATENCIÓN ACC_15: retorno de VCM_U1 a MONTE_SINAI (origen: VCM)
+[t=9671s] MISIÓN CERRADA VCM_U1 -> MONTE_SINAI (hospital alcanzado) | duración=397s | stock=3
+
+========== RESUMEN FASES 3 Y 4 ==========
+Tiempo simulado: 12600s
+Eventos iniciales: 15
+Intentos iniciados: 16
+Intentos fallidos: 1
+Accidentes reales registrados: 15
+Hora 1: 5 accidentes
+Hora 2: 5 accidentes
+Hora 3: 5 accidentes
+Accidentes en estado espera: 0
+Accidentes en estado en_camino: 0
+Accidentes en estado atendiendo: 0
+Accidentes en estado retorno: 0
+Accidentes en estado cerrado: 15
+Respuesta media despacho→llegada: 262.7s
+
+Hospital        Stock inicial/final | Despachos | Retornos | Rechazos
+VCM              3/1  |   8 |   6 |   5
+IESS_JCA         1/0  |   1 |   0 |  12
+MILITAR          1/1  |   1 |   1 |  11
+MUNI_PAT         3/4  |   2 |   3 |   4
+MUNI_VALLE       2/1  |   1 |   0 |   5
+MONTE_SINAI      0/3  |   2 |   5 |  10
+DEL_RIO          0/0  |   0 |   0 |  15
+
+========== DATOS PARA TABLA 4.8 ==========
+Vehículos de fondo insertados (car): 3568
+Vehículos de fondo insertados (bus): 298
+Vehículos de fondo insertados (moto): 894
+Motos de accidente insertadas por TraCI: 16
+Ambulancias insertadas (incluida prueba/reinserciones): 16
+Total vehículos de fondo insertados: 4760
+Colisiones SUMO (eventos por paso): 5774
+Pares únicos involucrados en colisiones SUMO: 24
+Accidentes bus-moto registrados por TraCI: 15
+Teleports iniciados (SUMO): 0
+
+FASE 5.1: archivos guardados: accidentes.csv, hospitales.csv, stock.csv
+Tiempo real de pared: 249.99 s

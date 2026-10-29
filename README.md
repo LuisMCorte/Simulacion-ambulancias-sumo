@@ -82,7 +82,7 @@ Se analizaron dos políticas de retorno:
 1. Retorno al hospital más cercano.
 2. Retorno al hospital de origen.
 
-### Fase 5. Análisis estadístico
+### Fase 5. Análisis estadístico - (Directorio resultados_base)
 
 Se procesaron los datos mediante Python y Pandas para obtener
 indicadores del desempeño del sistema.
@@ -119,7 +119,11 @@ Entre ellos:
 Los resultados corresponden al escenario con retorno al hospital
 más cercano.
 
-## Comparación de políticas de retorno
+En el directorio resultados_base se deja ver la figuras generadas con analisis.py
+apatir de los archivos.csv
+
+## Comparación de políticas de retorno (Directorio resultados_extension)
+
 
 | Indicador | Hospital más cercano | Hospital de origen |
 |---|---:|---:|
@@ -133,10 +137,14 @@ La comparación permite analizar cómo la política de retorno
 influye en la duración de las misiones y la distribución
 de la flota hospitalaria.
 
+En el directorio resultados_extension se deja ver la figuras generadas con analisis.py
+apatir de los archivos.csv
+
 ## Archivos principales
 
 - `reto_ambulancias.py`: simulación de accidentes y respuesta de ambulancias.
 - `reto_extension_retorno.py`: implementación de la política de retorno al origen.
+- `analisi.py`: generacion de graficas aparitr de archivo .csv.
 - `reto.sumocfg`: configuración de SUMO.
 - `cuenca_ciudad.net.xml`: red vial utilizada.
 - `vtypes.add.xml`: definición de tipos de vehículos.
